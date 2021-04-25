@@ -66,6 +66,7 @@ function call(id) {
       }
 
       divMessages.appendChild(createDiv);
+
     });
   });
 }
@@ -95,6 +96,7 @@ function sendMessage(id) {
 }
 
 socket.on("admin_receive_message", (data) => {
+
   const connection = connectionInSupport.find(
     (connection) => connection.socket_id === data.socket_id
   ); //Aqui utiliza o array de atendimento que foi inserido acima

@@ -79,8 +79,8 @@ io.on("connect", (socket) => {
     // Melhorias
   });
 
-  // socket.on("disconnect", async () => {
-  //   console.log(socket.id);
-  //   await connectionsService.deleteBySocketId(socket.id);
-  // });
+  socket.on("disconnect", async () => {
+    //console.log(socket.id);
+    await connectionsService.deleteBySocketId(socket.id);
+  });
 });
